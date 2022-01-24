@@ -1,6 +1,6 @@
 {
-  "root": "apps/main-app",
-  "sourceRoot": "apps/main-app/src",
+  "root": "apps/mfe-app",
+  "sourceRoot": "apps/mfe-app/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,23 +9,23 @@
       "defaultConfiguration": "production",
       "options": {
         "compiler": "babel",
-        "outputPath": "dist/apps/main-app",
-        "index": "apps/main-app/src/index.html",
+        "outputPath": "dist/apps/mfe-app",
+        "index": "apps/mfe-app/src/index.html",
         "baseHref": "/",
-        "main": "apps/main-app/src/main.tsx",
-        "polyfills": "apps/main-app/src/polyfills.ts",
-        "tsConfig": "apps/main-app/tsconfig.app.json",
-        "assets": ["apps/main-app/src/favicon.ico", "apps/main-app/src/assets"],
-        "styles": ["apps/main-app/src/styles.css"],
+        "main": "apps/mfe-app/src/main.tsx",
+        "polyfills": "apps/mfe-app/src/polyfills.ts",
+        "tsConfig": "apps/mfe-app/tsconfig.app.json",
+        "assets": ["apps/mfe-app/src/favicon.ico", "apps/mfe-app/src/assets"],
+        "styles": ["apps/mfe-app/src/styles.css"],
         "scripts": [],
-        "webpackConfig": "apps/main-app/webpack.config.js"
+        "webpackConfig": "apps/mfe-app/webpack.config.js"
       },
       "configurations": {
         "production": {
           "fileReplacements": [
             {
-              "replace": "apps/main-app/src/environments/environment.ts",
-              "with": "apps/main-app/src/environments/environment.prod.ts"
+              "replace": "apps/mfe-app/src/environments/environment.ts",
+              "with": "apps/mfe-app/src/environments/environment.prod.ts"
             }
           ],
           "optimization": true,
@@ -40,12 +40,13 @@
     "serve": {
       "executor": "@nrwl/web:dev-server",
       "options": {
-        "buildTarget": "main-app:build",
-        "hmr": false
+        "port": 4100,
+        "buildTarget": "mfe-app:build",
+        "hmr": true
       },
       "configurations": {
         "production": {
-          "buildTarget": "main-app:build:production",
+          "buildTarget": "mfe-app:build:production",
           "hmr": false
         }
       }
@@ -54,14 +55,14 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/main-app/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/mfe-app/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/main-app"],
+      "outputs": ["coverage/apps/mfe-app"],
       "options": {
-        "jestConfig": "apps/main-app/jest.config.js",
+        "jestConfig": "apps/mfe-app/jest.config.js",
         "passWithNoTests": true
       }
     }

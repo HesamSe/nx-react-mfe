@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
-    "main-app": "apps/main-app"
+    "main-app": "apps/main-app",
+    "mfe-app": "apps/mfe-app"
   }
 }
