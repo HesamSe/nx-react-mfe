@@ -8,9 +8,10 @@
  * Run one of the commands below:
 
    1. run flat microfrontend(working properly):
-
-        `nx serve micro-frontends-mfe-app-2`
+  
+        `nx serve mfe-app`
 
     2. run sub-folder micro frontend(cause error in main-app):
 
-        `nx serve mfe-app`
+        `nx serve micro-frontends-mfe-app-2`
+
