@@ -12,7 +12,7 @@
         "outputPath": "dist/apps/mfe-app",
         "index": "apps/mfe-app/src/index.html",
         "baseHref": "/",
-        "main": "apps/mfe-app/src/main.tsx",
+        "main": "apps/mfe-app/src/main.ts",
         "polyfills": "apps/mfe-app/src/polyfills.ts",
         "tsConfig": "apps/mfe-app/tsconfig.app.json",
         "assets": ["apps/mfe-app/src/favicon.ico", "apps/mfe-app/src/assets"],

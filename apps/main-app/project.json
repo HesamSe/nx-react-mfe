@@ -12,7 +12,7 @@
         "outputPath": "dist/apps/main-app",
         "index": "apps/main-app/src/index.html",
         "baseHref": "/",
-        "main": "apps/main-app/src/main.tsx",
+        "main": "apps/main-app/src/main.ts",
         "polyfills": "apps/main-app/src/polyfills.ts",
         "tsConfig": "apps/main-app/tsconfig.app.json",
         "assets": ["apps/main-app/src/favicon.ico", "apps/main-app/src/assets"],
@@ -41,7 +41,7 @@
       "executor": "@nrwl/web:dev-server",
       "options": {
         "buildTarget": "main-app:build",
-        "hmr": false
+        "hmr": true
       },
       "configurations": {
         "production": {

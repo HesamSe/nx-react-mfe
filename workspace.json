@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "main-app": "apps/main-app",
-    "mfe-app": "apps/mfe-app"
+    "mfe-app": "apps/mfe-app",
+    "micro-frontends-mfe-app-2": "apps/micro-frontends/mfe-app-2"
   }
 }

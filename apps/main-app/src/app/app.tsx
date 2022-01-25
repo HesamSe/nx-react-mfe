@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 // @ts-ignore
-const Button = React.lazy(() => import("mfe/Button"));
+const Button = React.lazy(() => import("@mfe/Button"));
 
 export function App() {
   return (

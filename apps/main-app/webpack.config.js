@@ -3,6 +3,7 @@ const { ModuleFederationPlugin } = require('webpack').container;
 
 module.exports = (config, context) => {
   const conf = nrwlConfig(config);
+  conf.optimization.runtimeChunk = false;
   return {
     ...conf,
     plugins: [
@@ -10,8 +11,9 @@ module.exports = (config, context) => {
       new ModuleFederationPlugin({
         name: "main_app",
         remotes: {
-          "mfe": "mfe_app@http://localhost:4100/remoteEntry.js",
-        }
+          "@mfe": "mfe_app@http://localhost:4100/remoteEntry.js",
+        },
+        shared: ["react","react-dom"]
       }),
     ]
   };

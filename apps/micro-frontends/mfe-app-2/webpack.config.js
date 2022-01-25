@@ -10,7 +10,7 @@ module.exports = (config, context) => {
     plugins: [
       ...conf.plugins,
       new ModuleFederationPlugin({
-        name: "mfe_app",
+        name: "mfe_app_2",
         filename: "remoteEntry.js",
         exposes: {
           "./Button": "./src/exposes/Button",
